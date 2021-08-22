@@ -227,9 +227,10 @@ class Application():
 
 
 root = Tk()
+print(root.maxsize())
 root.resizable(False, False)
 Application(root)
-root.geometry("1206x620")
-root.eval('tk::PlaceWindow . center')
+w, h = root.maxsize()
+root.geometry(f"1206x620+{int((w - 1206) / 2)}+{int((h - 620)/2)}")
 root.title("Inventory Management System by Techmaster.vn")
 root.mainloop()
