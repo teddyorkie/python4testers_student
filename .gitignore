@@ -1,1 +1,5 @@
 __pycache__/*
+.vscode/settings.json
+hackathon1/medium/__pycache__/*
+hackathon1/easy/__pycache__/*
+hackathon1/hard/__pycache__/*
