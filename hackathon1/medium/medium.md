@@ -1,10 +1,21 @@
-# [1] Ceasar cipher:
+# [1] String processing
+
+Viết một chương trình chấp nhận đầu vào là một chuỗi các từ tách biệt bởi khoảng trắng, loại bỏ các từ trùng lặp, sắp xếp theo thứ tự bảng chữ cái, rồi in chúng.
+
+- Giả sử đầu vào là: hello world and practice makes perfect and hello world again
+- Thì đầu ra là: again and hello makes perfect practice world
+
+Gợi ý:
+* Trong trường hợp dữ liệu đầu vào được nhập vào chương trình nó nên được giả định là dữ liệu được người dùng nhập vào từ giao diện điều khiển.
+* Sử dụng set để loại bỏ dữ liệu trùng lặp tự động và dùng sorted() để sắp xếp dữ liệu.
+
+# [2] Ceasar cipher:
 
 Mật mã này (có thể) được phát minh và sử dụng bởi Gaius Julius Caesar và quân đội của ông ta trong Chiến tranh Gallic. Ý tưởng khá đơn giản - mọi chữ cái của thông điệp được thay thế bằng chữ cái tiếp theo trong bảng chữ cái (A trở thành B, B trở thành C, v.v.). Ngoại lệ duy nhất là Z, trở thành A.
 
 Hoàn thiện 2 hàm trong file ceasar.py để mã hóa và giải mã những thông điệp này.
 
-# [2] Tên chuẩn IBAN (Số tài khoản ngân hàng quốc tế) 
+# [3] Tên chuẩn IBAN (Số tài khoản ngân hàng quốc tế) 
 
 IBAN cung cấp một phương pháp đơn giản và khá tin cậy để xác thực số tài khoản chống lại các lỗi đơn giản có thể xảy ra trong quá trình nhập số tk từ các tài liệu giấy, như biên nhận hoặc hóa đơn, vào máy tính.
 
@@ -19,3 +30,12 @@ Xác nhận theo các bước sau (Wikipedia):
 2. Di chuyển bốn ký tự đầu tiên đến cuối chuỗi (tức là mã quốc gia và các số kiểm tra)
 3. Thay mỗi chữ cái trong chuỗi bằng hai chữ số, từ đó mở rộng chuỗi, trong đó A = 10, B = 11 ... Z = 35;
 4. Xem chuỗi đó là dạng số nguyên và tính phần dư của số đó khi chia cho 97; Nếu phần dư là 1, nghĩa là pass bài test và IBAN có thể hợp lệ.
+
+# [4] Approximate PI
+Viết hàm approx_pi(n) tính xấp xỉ số PI theo công thức sau, với n là số phần tử của dãy số vô hạn:
+```
+            PI/4 ~ 1 - 1/3 + 1/5 - 1/7 + 1/9 - 1/11 + ....
+n = 1 --> PI = 4
+n = 2 --> PI = 8/3
+n = 6 --> PI/4 = 1 - 1/3 + 1/5 - 1/7 + 1/9 - 1/11
+```
