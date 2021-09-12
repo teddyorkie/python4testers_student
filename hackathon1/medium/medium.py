@@ -2,11 +2,17 @@ def str_process(s):
     words = [word for word in s.split(" ")]
     return " ".join(sorted(list(set(words))))
 
-def approx_pi(n):
-    tong = 0
-    k = 1
-    for i in range(1, n+1):
-        if i % 2 == 1:
-            tong = tong + k/i
-            k = -k
-    return tong * 4
+def roman_to_int(s):
+    lookup = { "I" : 1, "V" : 5, "X" : 10, "L" : 50,
+        "C" : 100, "D" : 500, "M" : 1000}
+    last_value = 0
+    number = 0
+    for char in s:
+        current_value = lookup[char]
+        if current_value <= last_value:
+            number += last_value
+        else:
+            number -= last_value
+        last_value = current_value
+    number += last_value
+    return number

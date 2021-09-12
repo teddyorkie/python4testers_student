@@ -1,8 +1,26 @@
-from operator import itemgetter
+def sort_break_down(s):
+    l,u,o,e=[],[],[],[]
+    for i in sorted(input()):
+        if i.isalpha():
+            x = u if i.isupper() else l
+        else:
+            x = o if int(i)%2 else e
+        x.append(i)
+    return "".join(l+u+o+e)
 
-def sort_list_last(tuples):
-    return sorted(tuples, key=itemgetter(2,1,0), reverse=True)
+def sort_letter_digit(s):
+    def get_key(x):
+        if x.islower():
+            return (1,x)
+        elif x.isupper():
+            return (2,x)
+        elif x.isdigit() :
+            if int(x)%2==1:
+                return (3,x)
+            else :
+                return (4,x)
 
+    return "".join(sorted(s, key=get_key))
 
 def mortgage_calc(mortgage, years, interest):
     interest /= 100
@@ -27,5 +45,3 @@ def max_water_area(height) -> int:
         else:
             j -= 1
     return ans
-
-print(mortgage_calc(8e8, 15, 11))

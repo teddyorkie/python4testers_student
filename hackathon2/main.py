@@ -1,17 +1,16 @@
 import unittest
-# from easy import basic
+from easy import basic
 # from medium import ceasar, iban, medium
 from hard import football, logparser
 
 # 15 bài tập : gòm 8 bài rất dễ,  4 bài trung bình, 3 bài nâng cao. (mỗi bài nâng cao 1 điểm)
-# class CheckEasySolutions(unittest.TestCase):
-#     def test_basic_print_star(self):
-#         pass
+class CheckEasySolutions(unittest.TestCase):
+    def test_morse_code(self):
+        self.assertTrue(basic.morse_code(["gin","zen","gig","msg"]), 2)
 
-#     def test_basic_anagram_number(self):
-#         self.assertTrue(basic.anagram_number(121121))
-#         self.assertFalse(basic.anagram_number(12134))
-#         self.assertTrue(basic.anagram_number(8888888888888888))
+    def test_reverse_vowels(self):
+        self.assertEqual(basic.reverse_vowels("hello"), "holle")
+        self.assertEqual(basic.reverse_vowels("Lop PYTHON"), "LOp PYTHoN")
 
 #     def test_basic_combine_list(self):
 #         list_one = [10, 20, 23, 11, 17]

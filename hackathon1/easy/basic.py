@@ -1,9 +1,12 @@
 # 1
-def print_star(line):
-    for i in range(line+1, 0, -1):
-        for j in range(0, i - 1):
-            print("*", end=' ')
-        print(" ")
+def approx_pi(n):
+    tong = 0
+    k = 1
+    for i in range(1, n+1):
+        if i % 2 == 1:
+            tong = tong + k/i
+            k = -k
+    return tong * 4
 
 # 2
 def anagram_number(number):
@@ -68,6 +71,9 @@ def alpha_num(sentence):
     return res
 
 # 8
-def unique_value_dict(my_dict):
-    return set( val for dic in my_dict for val in dic.values())
+from operator import itemgetter
+def sort_list_last(tuples):
+    # return sorted(tuples, key=itemgetter(2,1,0), reverse=True)
+    return sorted(tuples, key=lambda x: (x[2], x[1], x[0]), reverse=True)
 
+print("Hello class from another path")

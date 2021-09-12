@@ -5,3 +5,8 @@ hackathon1/hard/__pycache__/*
 hackathon1/medium/__pycache__/*
 exercises/__pycache__/*
 oop_exercise/__pycache__/*
+hackathon2/easy/__pycache__/*
+hackathon2/medium/__pycache__/*
+hackathon2/hard/__pycache__/*
+result/*
+code_along/__pycache__/*

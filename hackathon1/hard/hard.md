@@ -1,20 +1,10 @@
-# [1] Sort list tuple:
-Điểm thi học kỳ của sinh viên được lưu ở định dạng 1 tuple có 3 phần tử (name, midterm, endterm) gồm:
-name = (str) tên sinh viên
-midterm = (int) điểm thi giữa kỳ
-endterm = (int) điểm thi cuối kỳ
+# [1] Sort letters digits
+Bạn được cung cấp một chuỗi chỉ chứa các ký tự chữ và số.
+Nhiệm vụ của bạn là sắp xếp chuỗi theo cách sau:
 
-Cho một list gồm danh sách điểm thi của tất cả sinh viên 1 lớp. Viết chương trình Python để sắp xếp danh sách trước theo thứ tự giảm dần với thứ tự ưu tiên [Điểm thi cuối kỳ > Điểm thi giữa kỳ > Tên].
-
-Nếu đầu vào là:
-[('Tom', 5, 8), 
- ('John', 9, 10), 
- ('Jonny', 8, 10), 
- ('Jason', 10, 10), 
- ('Anna', 3, 8)]
-
-Thì đầu ra sẽ là:
-[('Jason', 10, 10), ('John', 9, 10), ('Jonny', 8, 10), ('Tom', 5, 8), ('Anna', 3, 8)]
+Tất cả các chữ cái thường (theo thứ tự abc) được sắp đứng trước các chữ cái viết hoa.
+Tất cả các chữ cái viết hoa (theo thứ tự abc) sẽ đứng trước các chữ số.
+Tất cả các chữ số lẻ (từ nhỏ đến lớn) đứng trước các chữ số chẵn (từ nhỏ đến lớn).
 
 # [2] Mortgage Payment
 Công thức tính số tiền phải trả ngân hàng hàng tháng sau khi vay mua nhà là 
@@ -44,3 +34,8 @@ Vd: A = [1,8,6,2,5,4,8,3,7] thể hiện độ cao của các tường ngăn ở
 2      x  x  x  x  x  x  x  x
     0  1  2  3  4  5  6  7  8
 ```
+# [4] Vé PowerPlay Vietlott
+Truy cập trang web https://vietlott.vn/vi/choi/power-6-55/cach-choi, vào mục (3) Điền thông tin trên thẻ chọn số. Phần thông tin chơi bao, có giải thích cách chọn chơi bao của game Vietlott 6/45. Viết hàm nhận vào kiểu chơi bao và bộ số người dùng chọn, trả ra tất cả các số vé hệ thống sẽ mua cho bạn.
+
+vd: power_6_45_ticket(7, [3, 5, 7, 8, 13, 23, 42]) trả ra
+[(3, 5, 7, 8, 13, 23), (3, 5, 7, 8, 13, 42), (3, 5, 7, 8, 23, 42), (3, 5, 7, 13, 23, 42), (3, 5, 8, 13, 23, 42), (3, 7, 8, 13, 23, 42), (5, 7, 8, 13, 23, 42)]

@@ -1,9 +1,10 @@
-# [1] Print star:
-Viết hàm có đầu vào là số n = số hàng cần in, và in ra hình sau (vd với n == 3)
+# [1] Approximate PI:
+Viết hàm approx_pi(n) tính xấp xỉ số PI theo công thức sau, với n là số phần tử của dãy số vô hạn:
 ```
-    * * *
-    * *
-    *
+            PI/4 ~ 1 - 1/3 + 1/5 - 1/7 + 1/9 - 1/11 + ....
+n = 1 --> PI = 4
+n = 2 --> PI = 8/3
+n = 6 --> PI/4 = 1 - 1/3 + 1/5 - 1/7 + 1/9 - 1/11
 ```
 
 # [2] Anagram Number:
@@ -28,7 +29,7 @@ vd: sampleDict = {"name": "Kelly", "age":25, "salary": 8000, "city": "New york" 
 Hàm dict_from_keys(sampleDict, keys) sẽ trả ra {'name': 'Kelly', 'salary': 8000}
 
 # [6] Reverse Word Order and Swap Case:
-Cho 1 chuỗi A (vd: "tHE fOX iS cOMING fOR tHE cHICKEN"). Viết hàm đảo ngược thứ tự các từ trong chuỗi và đổi tất cả các chữ cái từ hoa thành thường và ngược lại. (kết quả "Chicken The For Coming Is Fox The")
+
 
 # [7] Alphabet and Number:
 Viết hàm tìm tất cả những từ trong một câu có chứa cả chữ cái và số. Trả ra danh sách các từ như vậy trong một câu.
@@ -36,13 +37,20 @@ Vd:
 str1 = "Emma25 is Data scientist50 and AI Expert"
 alpha_num(str1) == ["Emma25", "scientist50"]
 
-# [8] Unique value Dictionary:
-Cho một list gồm 1 hoặc nhiều từ điển (Dictionary). Viết hàm để trả ra tập hợp tất cả các giá trị (values) duy nhất trong tất cả danh sách các từ điển trên.
+# [8] Sort list tuple:
+Điểm thi học kỳ của sinh viên được lưu ở định dạng 1 tuple có 3 phần tử (name, midterm, endterm) gồm:
+name = (str) tên sinh viên
+midterm = (int) điểm thi giữa kỳ
+endterm = (int) điểm thi cuối kỳ
 
-    vd: unique_value_dict([dict(Trang=38, Thu=38, Ngoc=27, Thanh=26, Yen=25, Hang=22, Thuy=22)]) == {22, 25, 26, 27, 38}
+Cho một list gồm danh sách điểm thi của tất cả sinh viên 1 lớp. Viết chương trình Python để sắp xếp danh sách trước theo thứ tự giảm dần với thứ tự ưu tiên [Điểm thi cuối kỳ > Điểm thi giữa kỳ > Tên].
 
-Trường hợp trên danh sách đầu vào có 1 từ điển map tên người vào tuổi của họ. Trả ra set các tuổi duy nhất
+Nếu đầu vào là:
+[('Tom', 5, 8), 
+ ('John', 9, 10), 
+ ('Jonny', 8, 10), 
+ ('Jason', 10, 10), 
+ ('Anna', 3, 8)]
 
-    vd: unique_value_dict([{"V":"S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"}, {"VII":"S005"}, {"V":"S009"},{"VIII":"S007"}]) == {'S009', 'S007', 'S002', 'S001', 'S005'}
-
-Trường hợp trên danh sách đầu vào có 7 dicts, mỗi dict chỉ có 1 cặp key-values. 5 giá trị trả về là duy nhất.
+Thì đầu ra sẽ là:
+[('Jason', 10, 10), ('John', 9, 10), ('Jonny', 8, 10), ('Tom', 5, 8), ('Anna', 3, 8)]

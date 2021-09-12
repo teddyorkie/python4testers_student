@@ -31,11 +31,15 @@ Xác nhận theo các bước sau (Wikipedia):
 3. Thay mỗi chữ cái trong chuỗi bằng hai chữ số, từ đó mở rộng chuỗi, trong đó A = 10, B = 11 ... Z = 35;
 4. Xem chuỗi đó là dạng số nguyên và tính phần dư của số đó khi chia cho 97; Nếu phần dư là 1, nghĩa là pass bài test và IBAN có thể hợp lệ.
 
-# [4] Approximate PI
-Viết hàm approx_pi(n) tính xấp xỉ số PI theo công thức sau, với n là số phần tử của dãy số vô hạn:
-```
-            PI/4 ~ 1 - 1/3 + 1/5 - 1/7 + 1/9 - 1/11 + ....
-n = 1 --> PI = 4
-n = 2 --> PI = 8/3
-n = 6 --> PI/4 = 1 - 1/3 + 1/5 - 1/7 + 1/9 - 1/11
-```
+# [4] Roman to Integer
+Các chữ số La Mã được thể hiện bằng bảy biểu tượng khác nhau: I, V, X, L, C, D và M với
+I=1; V=5; X=10; L=50; C=100; D=500; M=1000
+
+Ví dụ: 2 được viết là II bằng số La Mã, chỉ là hai chữ cái được thêm vào với nhau. 12 được viết là XII, đơn giản là X + II. Con số 27 được viết là XXVII, là XX + V + II.
+
+Chữ số La mã thường được viết từ lớn nhất đến nhỏ nhất từ trái sang phải. Tuy nhiên, chữ số cho bốn không phải là IIII. Thay vào đó, số bốn được viết là IV. Bởi vì cái đứng trước năm, chúng ta trừ nó ra làm bốn. Nguyên tắc tương tự cũng áp dụng cho số chín, được viết là IX. Có sáu trường hợp phép trừ được sử dụng:
+
+I có thể được đặt trước V (5) và X (10) để tạo thành 4 và 9.
+X có thể được đặt trước L (50) và C (100) để tạo ra 40 và 90.
+C có thể được đặt trước D (500) và M (1000) để tạo thành 400 và 900.
+Cho một chữ số la mã, hãy chuyển nó thành một số nguyên.
