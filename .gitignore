@@ -1,7 +1,8 @@
-.vscode/settings.json
 result/*
 hackathon2/htmlcov/*
 */__pycache__/*
 *.pyc
 *.summary
 *.coverage
+.idea/*
+.vscode/*
