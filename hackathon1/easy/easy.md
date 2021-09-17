@@ -28,7 +28,7 @@ vd: sampleDict = {"name": "Kelly", "age":25, "salary": 8000, "city": "New york" 
     keys = ["name", "salary"]
 Hàm dict_from_keys(sampleDict, keys) sẽ trả ra {'name': 'Kelly', 'salary': 8000}
 
-# [6] Reverse Word Order and Swap Case:
+# [6] :
 
 
 # [7] Alphabet and Number:

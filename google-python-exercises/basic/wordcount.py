@@ -7,40 +7,40 @@
 
 """Wordcount exercise
 
-Hàm main() đã được định nghĩa hoàn chỉnh ở dưới. Bạn phải viết hàm print_words()
-và print_top() mà sẽ được gọi từ main().
+Hàm main() đã được định nghĩa hoàn chỉnh ở dưới. Bạn phải viết hàm get_words()
+và get_top_words() mà sẽ được gọi từ main().
 
-1. Với đối số --count, viết hàm print_words(filename) đếm số lần xuất hiện của mỗi từ 
-trong file đầu vào và in ra theo định dạng sau:
-word1 count1
-word2 count2
-...
+1. Với đối số --count, viết hàm get_words(filename) đếm số lần xuất hiện của mỗi từ 
+trong file đầu vào và trả list các tuple theo định dạng sau:
+[(word1, count1), 
+(word2, count2)
+...]
 
-In danh sách trên theo thứ tự từ điển các từ (python sẽ sắp xếp dấu câu đứng trước
+Trả ra danh sách trên theo thứ tự từ điển các từ (python sẽ sắp xếp dấu câu đứng trước
 các chữ cái nên cũng không thành vấn đề). Lưu tất cả các từ dưới dạng chữ thường,
 vì vậy 'The' và 'the' được tính là cùng một từ.
 
-2. Với đối số --topcount, viết hàm print_top(filename) tương tự như print_words()
-nhưng chỉ in ra 20 từ thông dụng nhất sắp xếp theo từ thông dụng nhất ở trên cùng.
+2. Với đối số --topcount, viết hàm get_top_words(filename) tương tự như get_words()
+nhưng chỉ trả ra 20 từ thông dụng nhất sắp xếp theo từ thông dụng nhất ở trên cùng.
 
 Tùy chọn: định nghĩa một hàm helper để tránh lặp lại code trong các hàm 
-print_words() và print_top().
+get_words() và get_top_words().
 
 """
 
 import sys
 
 # +++your code here+++
-def print_words(filename):
+def get_words(filename):
   pass
 
-def print_top(filename):
+def get_top_words(filename):
   pass
 
 ###
 
 # This basic command line argument parsing code is provided and
-# calls the print_words() and print_top() functions which you must define.
+# calls the get_words() and get_top_words() functions which you must define.
 def main():
   if len(sys.argv) != 3:
     print('usage: ./wordcount.py {--count | --topcount} file')
@@ -48,13 +48,18 @@ def main():
 
   option = sys.argv[1]
   filename = sys.argv[2]
+  ans = []
   if option == '--count':
-    print_words(filename)
+    ans = get_words(filename)
   elif option == '--topcount':
-    print_top(filename)
+    ans = get_top_words(filename)
   else:
     print('unknown option: ' + option)
     sys.exit(1)
+
+  # print out the answer
+  for item in ans:
+    print(item[0], item[1])
 
 if __name__ == '__main__':
   main()

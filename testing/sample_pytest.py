@@ -1,3 +1,5 @@
+import pytest
+
 def setup_module(module):
     print("setting up MODULE {0}".format(module.__name__))
 
